@@ -1,38 +1,71 @@
+GET /20180924-sapa000*lx-v2-log-apache/_search
 {
+  "query": {
+    "match_all": {
+    }
+  }
+}
+
+
+GET /20180924-sapa000*lx-v2-log-apache/_search
+  {
     "size": 0,
     "aggs": {
-      "group_by_state": {
+      "group_by_referrer_application": {
         "terms": {
-          "field": "state.keyword",
-          "order": {
-            "average_balance": "desc"
-          }
-        },
+          "field": "application.keyword"
+        }
+      }
+   }
+  }
+  
+
+
+GET /20180924-sapa000*lx-v2-log-apache/_search
+  {
+    "size": 0,
+    "aggs": {
+      "group_by_referrer_application": {
+        "terms": {
+          "field": "application.keyword"
+        },      
         "aggs": {
-          "average_balance": {
-            "avg": {
-              "field": "balance"
+          "group_by_application_action": {
+            "terms": {
+              "field": "application_action.keyword",
+              "size": 20
             }
           }
         }
       }
-    }
+   }
   }
-
+  
+  
+GET /20180924-sapa000*lx-v2-log-apache/_search
   {
     "size": 0,
     "aggs": {
       "group_by_referrer_application": {
         "terms": {
           "field": "referrer_application.keyword"
-        }
-      },
+        },      
         "aggs": {
           "group_by_referrer_reqCode": {
-            "avg": {
-              "field": "referrer_reqCode.keyword"
+            "terms": {
+              "field": "referrer_reqCode.keyword",
+              "size": 20
             }
           }
         }
     }  
+   }
   }
+
+GET /*apache/_search
+{
+  "query": {
+    "match_all": {
+    }
+  }
+}
