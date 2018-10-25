@@ -1,0 +1,38 @@
+{
+    "size": 0,
+    "aggs": {
+      "group_by_state": {
+        "terms": {
+          "field": "state.keyword",
+          "order": {
+            "average_balance": "desc"
+          }
+        },
+        "aggs": {
+          "average_balance": {
+            "avg": {
+              "field": "balance"
+            }
+          }
+        }
+      }
+    }
+  }
+
+  {
+    "size": 0,
+    "aggs": {
+      "group_by_referrer_application": {
+        "terms": {
+          "field": "referrer_application.keyword"
+        }
+      },
+        "aggs": {
+          "group_by_referrer_reqCode": {
+            "avg": {
+              "field": "referrer_reqCode.keyword"
+            }
+          }
+        }
+    }  
+  }
