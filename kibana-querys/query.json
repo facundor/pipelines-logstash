@@ -1,10 +1,25 @@
-GET /20180924-sapa000*lx-v2-log-apache/_search
+GET /20180924-sapa0001lx-v2-log-apache/_search
 {
   "query": {
     "match_all": {
     }
   }
 }
+
+GET /20180924-sapa0001lx-v2-log-apache/_search
+{
+  "query": {
+    "range": {
+      "@timestamp": {
+                "gte" : "2015-08-28",
+                "lte" : "2015-08-29",
+                "format": "yyyy-MM-dd"
+                
+            }
+    }
+  }
+}
+
 
 
 GET /20180924-sapa000*lx-v2-log-apache/_search
