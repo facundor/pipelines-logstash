@@ -4,7 +4,7 @@ DATETIME %{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{TIME}
 
 LOAD_AVG_OK OK
 WARNING WARNING
-LOAD_AVG (?:%{LOAD_AVG_OK}|%{WARNING}) - load average: %{NUMBER:cpu1:float}, %{NUMBER:cpu2:float}, %{NUMBER:cpu3:float}
+LOAD_AVG (?:%{LOAD_AVG_OK}|%{WARNING}) - load average: %{NUMBER:cpu1}, %{NUMBER:cpu2}, %{NUMBER:cpu3}
 NAGIOSLOGLINE %{NAGIOSTIME} (?:%{NAGIOS_SERVICE_ALERT}|%{NAGIOS_CURRENT_SERVICE_STATE})
 NAGIOS_CURRENT_SERVICE_STATE %{NAGIOS_TYPE_CURRENT_SERVICE_STATE:nagios_type}: %{DATA:nagios_hostname};%{DATA:nagios_service};%{DATA:nagios_state};%{DATA:nagios_statetype};%{DATA:nagios_statecode};%{LOAD_AVG}
 NAGIOS_SERVICE_ALERT %{NAGIOS_TYPE_SERVICE_ALERT:nagios_type}: %{DATA:nagios_hostname};%{DATA:nagios_service};%{DATA:nagios_state};%{DATA:nagios_statelevel};%{NUMBER:nagios_attempt};%{LOAD_AVG}
