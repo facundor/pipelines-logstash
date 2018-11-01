@@ -1,0 +1,66 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
+
+- pipeline.id: logBIP_jboss_services
+  path.config: "/usr/share/logstash/pipeline/logBIP_jboss_services.conf"
+
+#- pipeline.id: jstack
+#  path.config: "/usr/share/logstash/pipeline/jstack.conf"
+
+#- pipeline.id: nagiosJBossBIP
+#  path.config: "/usr/share/logstash/pipeline/nagiosJBossBIP.conf"
+
+#- pipeline.id: nagiosJBossBIP_v2
+#  path.config: "/usr/share/logstash/pipeline/nagiosJBossBIP-v2.conf"
+
+#- pipeline.id: latencia
+#  path.config: "/usr/share/logstash/pipeline/Latencia.conf"
+
+#- pipeline.id: logBIM
+#  path.config: "/usr/share/logstash/pipeline/logBIM.conf"
+
+#- pipeline.id: logBIApaches
+#  path.config: "/usr/share/logstash/pipeline/logBIapache.conf"
+
+#- pipeline.id: logBI_sapa0001
+#  path.config: "/usr/share/logstash/pipeline/logBI_sapa0001.conf"
+
+#- pipeline.id: logBI_sapa0002
+#  path.config: "/usr/share/logstash/pipeline/logBI_sapa0002.conf"
+
+#- pipeline.id: logBIP_sbip0001lx
+#  path.config: "/usr/share/logstash/pipeline/logBIP_sbip0001lx.conf"
+
+#- pipeline.id: logBIP_sbip0002lx
+#  path.config: "/usr/share/logstash/pipeline/logBIP_sbip0002lx.conf"
+
+#- pipeline.id: logBIP_sbip3001lx
+#  path.config: "/usr/share/logstash/pipeline/logBIP_sbip3001lx.conf"
+
+#- pipeline.id: logBIP_sbip3002lx
+#  path.config: "/usr/share/logstash/pipeline/logBIP_sbip3002lx.conf"
+
+#- pipeline.id: logBIE_sbie0001lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie0001lx.conf"
+
+#- pipeline.id: logBIE_sbie0002lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie0002lx.conf"
+
+#- pipeline.id: logBIE_sbie0003lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie0003lx.conf"
+
+#- pipeline.id: logBIE_sbie0004lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie0004lx.conf"
+
+#- pipeline.id: logBIE_sbie3001lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie3001lx.conf"
+
+#- pipeline.id: logBIE_sbie3002lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie3002lx.conf"
+
+#- pipeline.id: logBIE_sbie3003lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie3003lx.conf"
+
+#- pipeline.id: logBIE_sbie3004lx
+#  path.config: "/usr/share/logstash/pipeline/logBIE_sbie3004lx.conf"
