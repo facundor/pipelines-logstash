@@ -77,10 +77,18 @@ GET /20180924-sapa000*lx-v2-log-apache/_search
    }
   }
 
-GET /*apache/_search
+PUT my_index
 {
-  "query": {
-    "match_all": {
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "my_join_field": { 
+          "type": "join",
+          "relations": {
+            "question": "answer" 
+          }
+        }
+      }
     }
   }
 }

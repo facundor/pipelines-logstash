@@ -2,8 +2,11 @@
 # For more information on multiple pipelines, see the documentation:
 #   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
 
-- pipeline.id: logBIP_jboss_services-v2
-  path.config: "/usr/share/logstash/pipeline/logBIP_jboss_services-v2.conf"
+- pipeline.id: logBIP_jboss_rmi
+  path.config: "/usr/share/logstash/pipeline/logBIP_jboss_rmi.conf"
+
+#- pipeline.id: logBIP_jboss_services-v2
+#  path.config: "/usr/share/logstash/pipeline/logBIP_jboss_services-v2.conf"
 
 #- pipeline.id: logBIP_jboss_services
 #  path.config: "/usr/share/logstash/pipeline/logBIP_jboss_services.conf"
